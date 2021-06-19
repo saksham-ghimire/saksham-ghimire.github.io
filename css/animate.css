@@ -1,0 +1,230 @@
+/* SVG animation */
+#hand-wave{
+    animation: rotate 1s  infinite alternate-reverse ;
+
+}
+
+#Pant1, #Gshirt, #Pant2{
+    animation: color-c-1 4s infinite alternate;
+}
+
+#BG1, #BG2{
+    animation: color-c-2 3s infinite alternate;
+
+}
+
+#Boot1 , #Boot2{
+    animation: color-c-3 3s infinite alternate;
+
+}
+
+
+#Eye1,#C1, #C2, #C3{
+    animation: bouce 1.5s  infinite alternate-reverse ;
+}
+#Rectangle55,#Rectangle56,#Rectangle57, #line1 {
+
+animation: changeColor 1s  infinite alternate-reverse ;
+
+}
+
+#Rectangle58,#Rectangle59,#Rectangle60,#Rectangle61,#Rectangle62,#Rectangle73,#Rectangle74,  #line2 {
+
+animation: changeColor 1.5s  infinite alternate-reverse ;
+
+}
+
+#Rectangle63,#Rectangle64,#Rectangle65,#Rectangle66,#Rectangle67,  #Rectangle68,#Rectangle69,#Rectangle70,#Rectangle71,#Rectangle72, #line3 {
+
+animation: changeColor 2s  infinite alternate-reverse ;
+
+}
+
+
+
+#Clock{
+animation: bounce 1s ease-out infinite alternate;
+transform-origin: center;
+transform-box: fill-box;
+
+}
+
+#Sec1, #Sec2, #Sec3{
+animation: bounce 1s ease-out infinite alternate;
+}
+
+#Eyelights{
+    animation: change-c-r 0.5s ease-out infinite alternate;
+}
+
+@keyframes change-c-r{
+    0% {
+        fill :white;
+  
+      }
+  
+      100% {
+          fill:   rgb(228, 45, 45);
+      }
+  
+
+}
+
+@keyframes rotate{
+from{
+    transform: rotateZ(0deg);
+}
+to {
+    transform: rotateZ(30deg);
+}
+
+}
+@keyframes changeColor{
+from {
+    fill: white;
+}
+to {
+    fill: #6C63FF;
+}
+}
+
+
+@keyframes bouce{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px)
+    }
+    }
+
+
+@keyframes bounce{
+0%{
+    transform: translateY(0);
+}
+100%{
+    transform: translateY(-4px)
+}
+}
+
+@keyframes color-c-1{
+    0% {
+      fill :rgb(46, 99, 212);
+
+    }
+    50%{
+        fill: rgb(156, 94, 0)
+    }
+
+    100% {
+        fill:   rgb(137, 28, 180);
+    }
+
+    
+}
+
+@keyframes color-c-2{
+    
+
+    100%{
+        fill:white;
+    }
+}
+
+@keyframes color-c-3{
+    0%{
+        fill: black
+
+    }
+    50%{
+        fill : rgb(11, 24, 145)
+
+    }
+    100%{
+        fill: purple
+
+    }
+}
+
+
+/* Letters animation */
+
+/* main landing page */
+.ml4 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.5em;
+    }
+.ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 0; 
+}
+
+
+/* Tetimonials */
+.ml10 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3em;
+  }
+  
+  .ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml10 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+  }
+
+
+  /* Contact */
+
+  .ml13 {
+    font-size: 1.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 2rem; 
+  }
+  
+  .ml13 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  /* Projects */
+  .ml16 {
+    color: #402d2d;
+    padding: 40px 0;
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+  }
+  
+  .ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  /* Main adjustment */
+  @media screen and (max-width: 600px) {
+    .ml4 {
+      font-size: 2.8em;
+    }
+    .ml10{
+        font-size: 2em;
+    }
+  }
