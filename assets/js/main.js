@@ -169,9 +169,9 @@
         itemSelector: '.portfolio-item'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select('#projects-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#projects-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
@@ -254,9 +254,5 @@
     })
   });
 
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
 
 })()

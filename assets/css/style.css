@@ -539,7 +539,7 @@ section {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.portfolio #projects-flters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -549,7 +549,7 @@ section {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #projects-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -562,12 +562,12 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #projects-flters li:hover,
+.portfolio #projects-flters li.filter-active {
   color: #149ddd;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #projects-flters li:last-child {
   margin-right: 0;
 }
 
@@ -918,7 +918,7 @@ section {
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .linkedin:hover i {
   background: #149ddd;
   color: #fff;
 }
