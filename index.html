@@ -1,454 +1,1188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>Saksham Ghimire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary:
+                "#335c67", 
+              secondary:
+                "#e09f3e", 
+              background:
+                "#f9f7f3", 
+            },
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+            fontFamily: {
+              mono: ['"Space Mono"'],
+              serif: ["PT Serif Caption"],
+              sans: ["Noto Sans Display"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-</head>
+    <title></title>
+  </head>
+  <body class="font-sans overflow-hidden">
+    
+    <div id="mobileMenuBtn" class="md:hidden fixed top-0 right-0 p-4 z-50">
+      <button
+        id="menuToggle"
+        class="bg-primary text-white p-2 rounded-md focus:outline-none"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
 
-<body>
-
-
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-    <header id="header">
-        <div class="d-flex flex-column">
-
-            <div class="profile">
-                <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Saksham Ghimire</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://github.com/saksham-ghimire" class="instagram"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/sakshyam-ghimire/" class="linkedin"><i
-                            class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door-fill"></i>
-                            <span>Home</span></a>
-                    </li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person-fill"></i>
-                            <span>About</span></a></li>
-                    <li><a href="#tech_stack" class="nav-link scrollto"><i class="bi bi-stack"></i>
-                            <span>Tech Stack</span></a>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark-person"></i>
-                            <span>Resume</span></a>
-                    </li>
-                    <li><a href="#projects" class="nav-link scrollto"><i class="bi bi-person-workspace"></i>
-                            <span>Projects</span></a></li>
-
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-person-lines-fill"></i>
-                            <span>Contact</span></a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="flex">
+      <nav
+        id="sidebar"
+        class="flex flex-col justify-center items-center w-64 h-screen bg-primary text-white p-4 sticky top-0 md:block hidden overflow-y-auto"
+      >
+        <div class="md:hidden absolute top-0 right-0 p-4">
+          <button id="closeMenu" class="text-white focus:outline-none">
+            <i class="fas fa-times text-xl"></i>
+          </button>
         </div>
-    </header>
 
+        <div class="flex flex-col h-full w-full">
+          <div class="flex flex-col flex-1 items-center justify-center space-y-8">
+            
+            <img
+              src="images/hero-pic.png"
+              alt="profile"
+              height="50%"
+              width="50%"
+              class="hidden md:block object-contain rounded-full mx-auto border-4 border-gray-100 border-opacity-50"
+            />
+            
 
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Saksham Ghimire</h1>
-            <p>I'm <span class="typed" data-typed-items="Developer, Designer, Engineer"></span></p>
-        </div>
-    </section>
-
-    <main id="main">
-
-
-        <section id="about" class="about">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                    <p>
-                        With a foundation in cybersecurity, I initially delved into the dynamic world of SIEM
-                        engineering
-                        before making a gradual transition to backend development. Over the past three years, I've
-                        contributed my skills to multiple companies, engaging with diverse national and international
-                        clients. Beyond coding, I am deeply captivated by the realm of open-source initiatives, and
-                        outside
-                        the world of software development, the intricacies of human psychology continue to fascinate me.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>Backend Developer/Engineer</h3>
-                        <p class="fst-italic">
-                            If, at first, you do not succeed, call it version 1.0.
-                        </p>
-
-                        <p style="text-align: justify">
-                            Bringing architectural finesse to backend development, having implemented various patterns
-                            such
-                            as pubsub and finite state machines (FSM), along with multiple design patterns.
-                            Proficient in developing multitenant, event-driven, microservices architecture and robust
-                            APIs,
-                            with extensive experience in working with various databases including SQL and NoSQL.
-                            Developmental expertise on the cloud platform such as AWS and GCP.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>Software Engineer (SIEM Engineer)</h3>
-                        <p class="fst-italic">
-                            Where's Waldo ??
-                            Hunting for elusive sanity in settings.
-                        </p>
-
-                        <p style="text-align: justify">
-                            Designing and implementing resilient Security Information and Event Management (SIEM) and
-                            Security Orchestration, Automation, and Response (SOAR) solutions.
-                            Meticulously crafting Ansible scripts tailored for intricate interactions with firewall
-                            rules,
-                            ensuring a sophisticated approach to security orchestration.
-                            Additionally, configuring Elasticsearch, Logstash, and Kibana, to establish an efficient and
-                            comprehensive log management infrastructure that enhances the security posture of the
-                            system.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-
-        <section id="tech_stack" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Tech Stack</h2>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><i class="bi bi-filetype-py"></i></div>
-                        <h4 class="title">Python</h4>
-                        <p class="description">
-                            Proficient in Falcon, Django, Flask, and FastAPI, adept at developing robust and
-                            asynchronous
-                            APIs;
-                            well-versed in machine learning models like SVM, KNN, and Linear Regression.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><i class="bi bi-text-paragraph"></i></div>
-                        <h4 class="title">Golang</h4>
-                        <p class="description">
-                            Developing resilient event-driven microservices with intricate intercommunication using
-                            channels,
-                            implementing a publisher-subscriber architecture.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                        <h4 class="title">ELK</h4>
-                        <p class="description">Expertise in ingesting large volumes of firewall logs, optimizing query
-                            time
-                            through
-                            node, shard, and index mapping configuration, and supporting data visualization and log
-                            parsing
-                            using Logstash.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon"><i class="bi bi-amazon"></i></div>
-                        <h4 class="title">AWS/GCP</h4>
-                        <p class="description"> Leveraging AWS tools like Lambdas, S3, SQS, EventBridge, Pinpoint, and
-                            GCP
-                            tools like Firebase and FCC for diverse cloud-based solutions.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon"><i class="bi bi-bezier2 "></i></div>
-                        <h4 class="title">Kafka</h4>
-                        <p class="description">Extending scalability for pubsub architecture, enhancing the efficiency
-                            of
-                            message processing, queues and distribution.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon"><i class="bi bi-git"></i></div>
-                        <h4 class="title">Git</h4>
-                        <p class="description">Well-versed in Git concepts such as head, merge, conflicts, and rebase;
-                            hands-on experience with GitLab and Bitbucket, ensuring effective version control and
-                            collaborative development.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section id="resume" class="resume">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Resume</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Msc Data science &amp; computational intelligence</h4>
-                            <h5>2022 - Present</h5>
-                            <p><em>Softwarica College, Gyaneshwor</em></p>
-                            <p>Currently enrolled </p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>BSc Hons Computer Networking &amp; IT security </h4>
-                            <h5>2018 - 2021</h5>
-                            <p><em>Islington College, Kamalpokhari</em></p>
-                            <p>Pursued specialized education in Networking and Cybersecurity, acquiring in-depth
-                                knowledge
-                                of network architecture, protocols, and security frameworks</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>Software Engineer</h4>
-                            <h5>2023 - Present</h5>
-                            <p><em>Tekvortex, Jhamsikhel</em></p>
-                            <ul>
-                                <li>
-                                    Architecting microservices infrastructure with seamless integration of AWS
-                                    components,
-                                    including SQS, EventBridge, and other essential services
-
-                                </li>
-                                <li>
-                                    Implementing a comprehensive testing strategy, encompassing Behavior-Driven
-                                    Development
-                                    (BDD), Test-Driven Development (TDD), and Unit Testing
-                                </li>
-                                <li>
-                                    Crafting resilient APIs, optimizing and maintaining existing ones, and seamlessly
-                                    integrating progressive features for ongoing enhancement
-                                </li>
-                                <li>
-                                    Integrating email and push notification system, responsible for targeting potential
-                                    client or entitled ones
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Software Engineer (SIEM)</h4>
-                            <h5>2020 - 2023</h5>
-                            <p><em>Vairav Technologies, Baluwatar</em></p>
-                            <ul>
-                                <li>Automating SOC operations which includes automated response to threat, automating
-                                    daily
-                                    tasks of analysts, and SOAR integration
-
-                                </li>
-                                <li>Team Lead for all golang respective backend projects
-                                </li>
-                                <li>Respondent at multiple cybersecurity workshops concerning specific software or
-                                    cybersecurity approach in general
-                                </li>
-                                <li>
-                                    Implementation of numerous software architectural models like pub-sub and
-                                    mathematical
-                                    models of computation like FSM
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-
-        <section id="projects" class="portfolio section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Projects</h2>
-                    <p>
-                        Engaged in diverse projects encompassing personal, professional, and freelance endeavors. While
-                        source code is unavailable for professional and freelance projects, comprehensive descriptions
-                        outline
-                        project objectives, accomplishments, and general approaches employed.
-                    </p>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="projects-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-microservices">Microservices</li>
-                            <li data-filter=".filter-opensource">Opensource</li>
-                            <li data-filter=".filter-database">Database</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-microservices">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/correlation-engine.png" class="img-fluid" alt="" width="687"
-                                height="470">
-                            <div class="portfolio-links">
-                                <a href="correlation-engine.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-microservices">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/threat-intel.png" class="img-fluid" alt="" width="687"
-                                height="470">
-                            <div class="portfolio-links">
-                                <a href="threat-intel.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-microservices">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/api.png" class="img-fluid" alt="" width="687" height="470">
-                            <div class="portfolio-links">
-                                <a href="apis.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-opensource">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/workplace-management.png" class="img-fluid" alt=""
-                                width="687" height="470">
-                            <div class="portfolio-links">
-                                <a href="employee-management.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-database">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/database.png" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="cdc.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-opensource">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/eventizer.png" class="img-fluid" alt="" width="687"
-                                height="470">
-                            <div class="portfolio-links">
-                                <a href="eventizer.html" title="More Details" style="width: 100%"><i
-                                        class="bi bi-card-text"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </section>
-
-
-
-        <section id="contact" class="contact">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>
-                        In addition to open-source collaboration, I'm also keen on exploring potential opportunities
-                        that align with my interests, skills, and aspirations. Whether it's a freelance project, a job
-                        opportunity, or a partnership endeavor, I'm open to discussing how we can collaborate and create
-                        value together.
-                    </p>
-                </div>
-
-                <div class="row" data-aos="fade-in">
-
-                    <div class="col-lg-12 d-flex align-items-stretch">
-                        <div class="info">
-
-
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Location:</h4>
-                                <p><a href="https://maps.app.goo.gl/TsgUWKHogKX6Nwqd6" target="_blank" >Kathmandu, Nepal</a></p>
-                            </div>
-
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <p><a href="mailto:gsakshyam3@gmail.com" target="_blank" >gsakshyam3@gmail.com</a></p>
-                            </div>
-
-                            <div class="linkedin">
-                                <i class="bi bi-linkedin"></i>
-                                <h4>LinkedIn:</h4>
-                                <p><a href="https://www.linkedin.com/in/sakshyam-ghimire/" target="_blank" >Saksham Ghimire</a></p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>iPortfolio</span></strong>
-            </div>
-        </div>
-        <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <ul class="space-y-4 text-center w-full">
+              
+              <li>
+                <a
+                  data-target="#home"
+                  href="/#home"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Home</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#about"
+                  href="/#about"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >About</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#resume"
+                  href="/#resume"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Resume</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#skills"
+                  href="/#skills"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Skills</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#projects"
+                  href="/#projects"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Projects</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#articles"
+                  href="/#articles"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Articles</a
+                >
+              </li>
+              
+            </ul>
           </div>
-    </footer>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+          
+          
+          
+          <div
+            class="border-t border-white/20 text-center text-xs text-white/60 m-auto"
+          >
+            <p>&copy; 2024 Saksham Ghimire. All rights reserved.</p>
 
+            
+          </div>
 
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+          
+        </div>
+      </nav>
 
-    <script src="assets/js/main.js"></script>
+      
+      <div
+        class="flex-1 h-screen overflow-y-auto bg-background md:scroll-smooth"
+      >
+        
+<div class="flex flex-col p-4 gap-20">
+  
+  
+  <section id="home" class="h-[90vh] flex items-center">
+    <div class="flex flex-col gap-8 w-full">
+      <div class="flex flex-col gap-3">
+        <h1 class="text-5xl font-bold font-serif uppercase">
+          Saksham Ghimire
+        </h1>
+        
+        <p class="text-lg font-mono">
+          Software Engineer | SIEM Engineer
+        </p>
+        
+      </div>
 
-</body>
+      <p class="w-[70%] max-w-screen-md text-justify">Tinkering with ideas until they work (or explode). A software engineer with around 5 years of experience, always diving into research and building things—sometimes even ones that already exist, because why not?</p>
 
+      
+      <div class="flex gap-4">
+        
+        <a
+          href="https://www.linkedin.com/in/sakshyam-ghimire/"
+          target="_blank"
+          class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 text-white shadow-md hover:bg-white hover:text-gray-500 transition text-2xl"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        <a
+          href="https://github.com/saksham-ghimire"
+          target="_blank"
+          class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 text-white shadow-md hover:bg-white hover:text-gray-500 transition text-2xl"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        
+        <a
+          href="mailto:gsakshyam3@gmail.com"
+          target="_blank"
+          class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-500 text-white shadow-md hover:bg-white hover:text-gray-500 transition text-2xl"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        
+      </div>
+      
+    </div>
+  </section>
+  
+
+  
+  <section id="about" class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4">
+      <h1 class="text-3xl font-bold text-primary font-mono">
+        <span class="underline underline-offset-8">Abo</span>ut
+      </h1>
+
+      <p class="text-justify">Started in cybersecurity, diving into SIEM systems, and gradually transitioned into software development. Over the years, worked on a variety of systems, including SIEM platforms, ERP solutions, and ETL pipelines. Passionate about exploring new ideas, learning continuously, and sharing technical insights online.</p>
+    </div>
+
+     
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-xl font-bold text-primary font-mono">Software Engineer</h1>
+        
+        <p class="italic text-sm">If, at first, you do not succeed, call it version 1.0.</p>
+        
+      </div>
+      
+      <p class="text-justify">Designing and building reliable software with clean, efficient architecture, using patterns like pub-sub, finite state machines (FSM), and other design strategies. Skilled in creating scalable, event-driven systems and APIs, with experience across SQL and NoSQL databases. Experienced in leveraging cloud platforms like AWS and GCP to deploy and manage applications effectively.</p>
+      
+    </div>
+    
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-xl font-bold text-primary font-mono">Software Engineer</h1>
+        
+        <p class="italic text-sm">Where&#39;s Waldo ?? Hunting for elusive sanity in settings.</p>
+        
+      </div>
+      
+      <p class="text-justify">Designing and managing robust SIEM (Security Information and Event Management) and SOAR (Security Orchestration, Automation, and Response) solutions. Creating precise Ansible scripts to handle complex firewall and network configurations, ensuring smooth security operations. Configuring and optimizing Elasticsearch, Logstash, and Kibana to build a reliable log management infrastructure that strengthens overall system security.</p>
+      
+    </div>
+     
+  </section>
+
+  
+  
+  <section id="resume" class="flex flex-col gap-6">
+    <h1 class="text-3xl font-bold text-primary font-mono">
+      <span class="underline underline-offset-8">Res</span>ume 
+      <a
+        href="resume.pdf"
+        target="_blank"
+        class="text-lg hover:text-primary/70 transition-colors"
+        aria-label="Download PDF Resume"
+      >
+        <i class="fas fa-file-pdf"></i>
+        <span class="sr-only">Download PDF Resume</span>
+      </a>
+      
+    </h1>
+
+    <div class="flex flex-wrap gap-10">
+      
+      
+      <div class="flex min-w-[300px] flex-1 flex-col gap-6">
+        <h1 class="text-xl font-bold text-primary font-mono">Education</h1>
+        <div class="border-s-2 border-solid border-primary space-y-8">
+          
+          <div class="relative ps-6">
+            <div
+              class="absolute -left-[0.65rem] top-1.5 w-5 h-5 rounded-full border-4 border-background bg-primary"
+            ></div>
+            <h3 class="font-semibold text-lg uppercase">Msc Data science &amp; computational intelligence</h3>
+            
+            <div
+              class="bg-gray-200 text-gray-700 inline-block px-3 py-1 rounded text-sm my-2"
+            >
+              2022 - 2024
+            </div>
+             
+            <p class="text-gray-600 italic">Softwarica College</p>
+             
+            <p class="mt-2">Gained skills in machine learning, data analysis, and AI-driven solutions, applying theoretical concepts to real-world datasets and projects.</p>
+            
+          </div>
+          
+          <div class="relative ps-6">
+            <div
+              class="absolute -left-[0.65rem] top-1.5 w-5 h-5 rounded-full border-4 border-background bg-primary"
+            ></div>
+            <h3 class="font-semibold text-lg uppercase">BSc Hons Computer Networking &amp; IT security</h3>
+            
+            <div
+              class="bg-gray-200 text-gray-700 inline-block px-3 py-1 rounded text-sm my-2"
+            >
+              2018 - 2021
+            </div>
+             
+            <p class="text-gray-600 italic">Islington College</p>
+             
+            <p class="mt-2">Pursued specialized education in Networking and Cybersecurity, acquiring knowledge of network architecture, protocols, and security frameworks</p>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="flex min-w-[300px] flex-1 flex-col gap-6">
+        <h1 class="text-xl font-bold text-primary font-mono">Experience</h1>
+        <div class="border-s-2 border-solid border-primary space-y-8">
+          
+          <div class="relative ps-6">
+            <div
+              class="absolute -left-[0.65rem] top-1.5 w-5 h-5 rounded-full border-4 border-background bg-primary"
+            ></div>
+            <h3 class="font-semibold text-lg uppercase">Senior Software Engineer</h3>
+            
+            <div
+              class="bg-gray-200 text-gray-700 inline-block px-3 py-1 rounded text-sm my-2"
+            >
+              2024 - Present
+            </div>
+             
+            <p class="text-gray-600 italic">Leapfrog Technology</p>
+             
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              
+              <li>Optimized data retrieval performance by designing and implementing database partitioning and indexing strategies in PostgreSQL</li>
+              
+              <li>Engineered a robust ETL pipeline for healthcare data using Airflow, automating data ingestion and processing</li>
+              
+              <li>Developed a complete ERP system, integrating third- party tools like Odoo and AutoCAD for extended functionality</li>
+              
+              <li>Enhanced the application’s user experience by developing an intuitive frontend</li>
+              
+            </ul>
+            
+          </div>
+          
+          <div class="relative ps-6">
+            <div
+              class="absolute -left-[0.65rem] top-1.5 w-5 h-5 rounded-full border-4 border-background bg-primary"
+            ></div>
+            <h3 class="font-semibold text-lg uppercase">Software Engineer</h3>
+            
+            <div
+              class="bg-gray-200 text-gray-700 inline-block px-3 py-1 rounded text-sm my-2"
+            >
+              2023 - 2024
+            </div>
+             
+            <p class="text-gray-600 italic">Tekvortex</p>
+             
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              
+              <li>Built a content curation platform that identifies and highlights relevant content, providing analysts with real-time, actionable intelligence</li>
+              
+              <li>Engineered a logging pipeline that stores user behavioral data in Elasticsearch, enabling the creation of dashboards that track user engagement, page visits, and link interactions for in-depth analytics</li>
+              
+              <li>Integrated Behavior-Driven Development (BDD) into the development workflow, significantly improving code reliability and ensuring features met business requirements</li>
+              
+              <li>Optimized search functionality by implementing custom tokenizers for different indexes in Elasticsearch, significantly improving search relevance and efficiency for various user queries.</li>
+              
+            </ul>
+            
+          </div>
+          
+          <div class="relative ps-6">
+            <div
+              class="absolute -left-[0.65rem] top-1.5 w-5 h-5 rounded-full border-4 border-background bg-primary"
+            ></div>
+            <h3 class="font-semibold text-lg uppercase">Software Engineer (SIEM)</h3>
+            
+            <div
+              class="bg-gray-200 text-gray-700 inline-block px-3 py-1 rounded text-sm my-2"
+            >
+              2020 - 2023
+            </div>
+             
+            <p class="text-gray-600 italic">Vairav Technology</p>
+             
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              
+              <li>Automating SOC operations which includes automated response to threat, automating daily tasks of analysts, and SOAR integration</li>
+              
+              <li>Respondent at multiple cybersecurity workshops concerning specific software or cybersecurity approach in general</li>
+              
+              <li>Engineered a complete SIEM pipeline using Logstash to ingest logs into Elasticsearch, enabling centralized log analysis</li>
+              
+              <li>Team Lead for all golang respective backend projects</li>
+              
+            </ul>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+
+  
+  
+  <section id="skills" class="flex flex-col gap-6">
+    <h1 class="text-3xl font-bold text-primary font-mono">
+      <span class="underline underline-offset-8">Ski</span>lls
+    </h1>
+
+    <div
+      class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 items-start w-[95%] max-w-screen-xl mx-auto"
+    >
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-0"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-code"></i></span>
+            
+            <span class="uppercase">Frontend</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-0"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Building responsive and accessible UIs using modern frameworks and React js
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-1"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-code"></i></span>
+            
+            <span class="uppercase">Backend</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-1"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Developing scalable APIs and microservices with Go, Python, and Node.js for robust backend solutions.
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-2"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-cloud"></i></span>
+            
+            <span class="uppercase">Cloud</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-2"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Designing and deploying applications on AWS, with a focus on reliability and scalability.
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-3"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-shield-alt"></i></span>
+            
+            <span class="uppercase">Security</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-3"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Implementing secure coding practices, authentication, encryption, and SIEM-based monitoring.
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-4"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-database"></i></span>
+            
+            <span class="uppercase">Database</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-4"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Managing relational and NoSQL databases with optimization, partitioning, and CDC for high-performance systems.
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-5"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-cogs"></i></span>
+            
+            <span class="uppercase">DevOps</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-5"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Setting up CI/CD pipelines, automated deployments, and infrastructure monitoring for efficient development.
+        </div>
+        
+      </div>
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 flex flex-col"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center justify-between px-4 py-3 h-12 focus:outline-none accordion-toggle"
+          data-target="skill-6"
+        >
+          <span
+            class="flex items-center gap-2 text-primary font-mono font-semibold text-lg"
+          >
+            
+            <span class="text-xl"><i class="fas fa-robot"></i></span>
+            
+            <span class="uppercase">Machine Learning</span>
+          </span>
+          <span class="accordion-arrow transition-transform duration-200"
+            ><i class="fas fa-chevron-down"></i
+          ></span>
+        </button>
+        
+        <div
+          id="skill-6"
+          class="accordion-content px-4 pb-3 hidden text-sm h-auto sm:overflow-y-auto text-gray-700"
+        >
+          Conducting research on semi-supervised learning for automated rule induction.
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+  
+
+  
+  
+  <section id="projects" class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4">
+      <h1 class="text-3xl font-bold text-primary font-mono">
+        <span class="underline underline-offset-8">Pro</span>jects
+      </h1>
+    </div>
+    <div class="flex flex-col w-[85%] max-w-screen-xl mx-auto gap-6">
+      
+      <div class="border-b border-gray-200">
+        <ul
+          class="flex flex-wrap overflow-x-auto -mb-px text-sm font-medium text-center scrollbar-hide project-tabs"
+          style="white-space: nowrap"
+        >
+          <li class="mr-2">
+            <a
+              href="#"
+              class="inline-block p-4 border-b-2 text-primary border-primary hover:text-primary hover:border-primary font-mono project-tab"
+              data-target-category="all"
+              >All</a
+            >
+          </li>
+          
+          <li class="mr-2">
+            <a
+              href="#"
+              class="inline-block p-4 border-b-2 capitalize hover:text-primary hover:border-primary font-mono project-tab"
+              data-target-category="general"
+              >general</a
+            >
+          </li>
+          
+          <li class="mr-2">
+            <a
+              href="#"
+              class="inline-block p-4 border-b-2 capitalize hover:text-primary hover:border-primary font-mono project-tab"
+              data-target-category="opensource"
+              >opensource</a
+            >
+          </li>
+          
+          <li class="mr-2">
+            <a
+              href="#"
+              class="inline-block p-4 border-b-2 capitalize hover:text-primary hover:border-primary font-mono project-tab"
+              data-target-category="database"
+              >database</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+
+      
+      <div
+        class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 project-list"
+      >
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="general"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/correlation-engine.png"
+            alt="Correlation Engine thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_correlation_engine.html"
+            >
+              Correlation Engine
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              A Golang-powered correlation engine using Pub/Sub channels to process logs and efficiently detect anomalies in network activity.
+            </p>
+            <a
+              href="/project_correlation_engine.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="general"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/threat-intel.png"
+            alt="Threat Intel thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_threat_intel.html"
+            >
+              Threat Intel
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              A hybrid system that analyzes logs, queries threat intelligence sources, enriches data with Python crawlers, and pushes alerts to Elasticsearch.
+            </p>
+            <a
+              href="/project_threat_intel.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="opensource"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/workplace-management.png"
+            alt="Employee Management System thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_employee_management_system.html"
+            >
+              Employee Management System
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              A cross-platform monitoring solution with Golang clients and a Python server, exchanging system metrics over gRPC for reliable communication.
+            </p>
+            <a
+              href="/project_employee_management_system.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="database"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/database.png"
+            alt="CDC (SQL) thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_cdc_script.html"
+            >
+              CDC (SQL)
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              A flexible CDC script for MySQL and PostgreSQL that auto-generates triggers to maintain detailed pre- and post-update audit logs for tables.
+            </p>
+            <a
+              href="/project_cdc_script.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="opensource"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/eventizer.png"
+            alt="Rule Matching Engine thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_jsontology.html"
+            >
+              Rule Matching Engine
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              An open-source Golang library for real-time JSON rule matching, supporting aggregation, event chaining, and advanced Boolean logic operators.
+            </p>
+            <a
+              href="/project_jsontology.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div
+          class="max-w-sm w-full border border-gray-300 rounded-lg shadow-lg project-card flex flex-col"
+          data-category="opensource"
+        >
+          <img
+            class="rounded-t-lg w-full h-36 object-contain"
+            src="images/portfolio-builder.png"
+            alt="Portfolio Builder thumbnail"
+          />
+
+          <div class="flex flex-col gap-2 p-5 flex-1">
+            <a
+              class="mb-2 text-xl font-bold tracking-tight text-primary"
+              href="/project_portfolio_builder.html"
+            >
+              Portfolio Builder
+            </a>
+            <p class="mb-3 font-normal text-primary-700 text-sm">
+              A Golang-based static site generator that creates customizable personal portfolio websites directly from simple YAML configuration files.
+            </p>
+            <a
+              href="/project_portfolio_builder.html"
+              class="inline-flex items-center px-2 py-1.5 text-base text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition self-start mt-auto"
+            >
+              View Project
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+  <section id="articles" class="flex flex-col gap-6">
+    <div class="flex flex-col gap-4">
+      <h1 class="text-3xl font-bold text-primary font-mono">
+        <span class="underline underline-offset-8">Art</span>icles
+      </h1>
+      
+    </div>
+
+    
+    <div class="flex flex-col gap-6 w-4/5 mx-auto">
+      
+      <div
+        class="border border-gray-300 rounded-lg shadow-md overflow-hidden bg-white"
+      >
+        <div class="p-5">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-800 hover:text-primary">
+              Beyond Basics of Postgres: Risk of cross-row read in check constraint
+            </h3>
+            
+            <span class="text-xs text-gray-500">July 27, 2025</span>
+            
+          </div>
+          
+          <p class="text-gray-600 mb-4">Exploring the implications of cross-row reads in Postgres check constraints</p>
+           
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            <span
+              class="bg-gray-100 text-primary-700 text-xs px-2 py-1 rounded-full"
+              >database</span
+            >
+            
+            <span
+              class="bg-gray-100 text-primary-700 text-xs px-2 py-1 rounded-full"
+              >postgres</span
+            >
+            
+          </div>
+          
+          <div class="flex justify-between items-center">
+            
+            <span class="text-sm text-gray-500"
+              >Published on Medium</span
+            >
+             
+            <a
+              href="https://gsakshyam3.medium.com/beyond-basics-of-postgres-risk-of-cross-row-read-in-check-constraint-307bb23a138f"
+              target="_blank"
+              class="p-2 rounded-full bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 border border-gray-300 transition"
+              aria-label="Read More"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="border border-gray-300 rounded-lg shadow-md overflow-hidden bg-white"
+      >
+        <div class="p-5">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-800 hover:text-primary">
+              Matching json with jsontology
+            </h3>
+            
+            <span class="text-xs text-gray-500">Sept 21, 2024</span>
+            
+          </div>
+          
+          <p class="text-gray-600 mb-4">Exploring custom made simple json matching engine</p>
+           
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            <span
+              class="bg-gray-100 text-primary-700 text-xs px-2 py-1 rounded-full"
+              >golang</span
+            >
+            
+          </div>
+          
+          <div class="flex justify-between items-center">
+            
+            <span class="text-sm text-gray-500"
+              >Published on Medium</span
+            >
+             
+            <a
+              href="https://gsakshyam3.medium.com/matching-json-with-jsontology-34a2e4ae7df5"
+              target="_blank"
+              class="p-2 rounded-full bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 border border-gray-300 transition"
+              aria-label="Read More"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="border border-gray-300 rounded-lg shadow-md overflow-hidden bg-white"
+      >
+        <div class="p-5">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-800 hover:text-primary">
+              Understanding python GIL
+            </h3>
+            
+            <span class="text-xs text-gray-500">Feb 25, 2024</span>
+            
+          </div>
+          
+          <p class="text-gray-600 mb-4">Exploring the Global Interpreter Lock (GIL) in Python and its implications for concurrency</p>
+           
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            <span
+              class="bg-gray-100 text-primary-700 text-xs px-2 py-1 rounded-full"
+              >python</span
+            >
+            
+            <span
+              class="bg-gray-100 text-primary-700 text-xs px-2 py-1 rounded-full"
+              >concurrency</span
+            >
+            
+          </div>
+          
+          <div class="flex justify-between items-center">
+            
+            <span class="text-sm text-gray-500"
+              >Published on LinkedIn</span
+            >
+             
+            <a
+              href="https://www.linkedin.com/pulse/understanding-python-gil-sakshyam-ghimire-weeoc/"
+              target="_blank"
+              class="p-2 rounded-full bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 border border-gray-300 transition"
+              aria-label="Read More"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <div class="flex justify-center mt-4">
+      <a
+        href="articles.html"
+        class="inline-flex items-center px-3 py-2.5 text-base font-medium text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 transition"
+      >
+        View All Articles
+        <svg
+          class="w-4 h-4 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+  
+</div>
+
+      </div>
+    </div>
+  </body>
 </html>

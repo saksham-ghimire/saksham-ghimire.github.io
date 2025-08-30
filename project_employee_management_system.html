@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary:
+                "#335c67", 
+              secondary:
+                "#e09f3e", 
+              background:
+                "#f9f7f3", 
+            },
+
+            fontFamily: {
+              mono: ['"Space Mono"'],
+              serif: ["PT Serif Caption"],
+              sans: ["Noto Sans Display"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Project Details</title>
+  </head>
+  <body class="font-sans overflow-hidden">
+    
+    <div id="mobileMenuBtn" class="md:hidden fixed top-0 right-0 p-4 z-50">
+      <button
+        id="menuToggle"
+        class="bg-primary text-white p-2 rounded-md focus:outline-none"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="flex">
+      <nav
+        id="sidebar"
+        class="flex flex-col justify-center items-center w-64 h-screen bg-primary text-white p-4 sticky top-0 md:block hidden overflow-y-auto"
+      >
+        <div class="md:hidden absolute top-0 right-0 p-4">
+          <button id="closeMenu" class="text-white focus:outline-none">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+
+        <div class="flex flex-col h-full w-full">
+          <div class="flex flex-col flex-1 items-center justify-center space-y-8">
+            
+            <img
+              src="images/hero-pic.png"
+              alt="profile"
+              height="50%"
+              width="50%"
+              class="hidden md:block object-contain rounded-full mx-auto border-4 border-gray-100 border-opacity-50"
+            />
+            
+
+            <ul class="space-y-4 text-center w-full">
+              
+              <li>
+                <a
+                  data-target="#home"
+                  href="/#home"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Home</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#about"
+                  href="/#about"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >About</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#resume"
+                  href="/#resume"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Resume</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#skills"
+                  href="/#skills"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Skills</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#projects"
+                  href="/#projects"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Projects</a
+                >
+              </li>
+              
+              <li>
+                <a
+                  data-target="#articles"
+                  href="/#articles"
+                  class="block py-2 px-4 font-semibold rounded transition text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-0"
+                  >Articles</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+
+          
+          
+          
+          <div
+            class="border-t border-white/20 text-center text-xs text-white/60 m-auto"
+          >
+            <p>&copy; 2024 Saksham Ghimire. All rights reserved.</p>
+
+            
+          </div>
+
+          
+        </div>
+      </nav>
+
+      
+      <div
+        class="flex-1 h-screen overflow-y-auto bg-background md:scroll-smooth"
+      >
+        
+<div class="flex flex-col p-4 gap-10 max-w-screen-xl mx-auto">
+  <section class="flex flex-col gap-6">
+    <div class="flex items-center gap-2 mb-2">
+      <a
+        href="/#projects"
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-primary border border-gray-200 shadow hover:bg-primary hover:text-white transition focus:outline-none focus:ring-2 focus:ring-primary/30"
+        title="Back to Projects"
+      >
+        <i class="fas fa-arrow-left text-lg"></i>
+      </a>
+      <h1 class="text-3xl font-bold text-primary font-mono ml-2">
+        <span class="underline underline-offset-8">Pro</span>ject Details
+      </h1>
+    </div>
+
+    
+    <div
+      class="grid gap-4 grid-cols-1 sm:grid-cols-[minmax(220px,1fr)_auto] items-center bg-white rounded-lg shadow border border-gray-200 p-6"
+    >
+      <div class="min-w-[180px] flex flex-col gap-2">
+        <h2 class="text-2xl font-bold text-gray-800 mb-1">Employee Management System</h2>
+        <div class="flex flex-wrap gap-2 items-center text-xs">
+          <span
+            class="inline-flex items-center px-2 py-1 rounded bg-secondary text-white font-semibold capitalize"
+            ><i class="fas fa-tag mr-1"></i> opensource</span
+          >
+        </div>
+      </div>
+      
+      <div class="flex flex-col gap-2 items-end min-w-[140px]">
+        <a
+          href="https://github.com/saksham-ghimire/workplace-management-system"
+          target="_blank"
+          class="inline-flex items-center px-3 py-2 rounded bg-primary text-white text-sm font-mono transition hover:bg-primary/90"
+          rel="noopener"
+        >
+          <i class="fas fa-external-link-alt mr-2"></i> View Source
+        </a>
+      </div>
+      
+    </div>
+
+    
+    <div class="grid gap-6 grid-cols-1 lg:grid-cols-3">
+      
+      <div
+        class="bg-white rounded-lg shadow border border-gray-200 p-6 flex flex-col gap-4 w-full order-2 lg:order-1 lg:col-span-2"
+      >
+        <h3 class="text-xl font-bold text-primary">Project Overview</h3>
+        <p class="text-gray-700 text-base">The Employee Management System is a cross-platform monitoring and control solution built with Golang clients and a Python-based server. Its primary objective was to give administrators real-time visibility into employee system usage by collecting data such as CPU load, network traffic, and active applications. Beyond monitoring, the system also introduced security controls like enforcing IP blocking via Windows firewall rules, ensuring proactive protection against misuse. The collected data is visualized and reported using Elasticsearch and Chart.js, providing administrators with actionable insights. This project brings value by combining monitoring, analytics, and security enforcement into a single platform that helps organizations optimize resources and maintain a secure work environment.</p>
+
+        
+        
+        <div class="mt-6">
+          <h4 class="text-lg font-bold text-secondary mb-2">
+            Technical Insights
+          </h4>
+          <ul class="list-disc pl-6 text-gray-700 text-base">
+            
+            <li>Built Golang clients with Win32 API integration for process-level monitoring and firewall rule enforcement.</li>
+            
+            <li>Implemented gRPC communication between distributed clients and a centralized Python server.</li>
+            
+            <li>Stored system metrics in Elasticsearch for analysis and visualization.</li>
+            
+            <li>Used Chart.js to generate reports and dashboards for administrators.</li>
+            
+          </ul>
+        </div>
+        
+      </div>
+
+      
+      <div
+        class="bg-white rounded-lg shadow self-start border border-gray-200 p-6 flex flex-col gap-4 w-full order-1 lg:order-2 lg:col-span-1"
+      >
+        
+        <h3 class="text-lg font-bold text-primary mb-2">Tech Stack</h3>
+        <div class="flex flex-wrap gap-2">
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >Golang</span
+          >
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >Python</span
+          >
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >Javascript (Chart.js)</span
+          >
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >Elasticsearch</span
+          >
+          
+        </div>
+        
+
+        <h3 class="text-lg font-bold text-primary mt-4 mb-2">Tags</h3>
+        <div class="flex flex-wrap gap-2">
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >System Monitoring</span
+          >
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >gRPC</span
+          >
+          
+          <span
+            class="bg-gray-100 text-primary-700 text-xs px-3 py-1 rounded-full"
+            >Visualization</span
+          >
+          
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

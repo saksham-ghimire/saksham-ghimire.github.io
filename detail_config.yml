@@ -1,0 +1,462 @@
+template_id: "0001"
+base:
+  theme:
+    primary: "#335c67" # Your custom primary color
+    secondary: "#e09f3e" # Your custom secondary color
+    background: "#f9f7f3" # Your custom background color
+  profile_image: "images/hero-pic.png" # Path to your profile image
+  nav_items:
+    - title: "Home"
+      link: "/#home"
+      data_target_id: "#home"
+    - title: "About"
+      link: "/#about"
+      data_target_id: "#about"
+    - title: "Resume"
+      link: "/#resume"
+      data_target_id: "#resume"
+    - title: "Skills"
+      link: "/#skills"
+      data_target_id: "#skills"
+    - title: "Projects"
+      link: "/#projects"
+      data_target_id: "#projects"
+    - title: "Articles"
+      link: "/#articles"
+      data_target_id: "#articles"
+
+  copyright: # optional
+    text: "2024 Saksham Ghimire. All rights reserved."
+
+pages:
+  index:
+    title: "Saksham Ghimire" # Replace with your name
+
+    home:
+      name: "Saksham Ghimire" # Replace with your name
+      designations: # optional, list your roles or titles
+        - "Software Engineer"
+        - "SIEM Engineer"
+      bio: "Tinkering with ideas until they work (or explode). A software engineer with around 5 years of experience, always diving into research and building things—sometimes even ones that already exist, because why not?"
+      contacts: # optional, social links
+        - icon: "fab fa-linkedin-in"
+          link: "https://www.linkedin.com/in/sakshyam-ghimire/"
+        - icon: "fab fa-github"
+          link: "https://github.com/saksham-ghimire"
+        - icon: "fas fa-envelope"
+          link: "mailto:gsakshyam3@gmail.com"
+
+    about:
+      overview:
+        "Started in cybersecurity, diving into SIEM systems, and gradually transitioned into software development.
+        Over the years, worked on a variety of systems, including SIEM platforms, ERP solutions, and ETL pipelines.
+        Passionate about exploring new ideas, learning continuously, and sharing technical insights online."
+      designations: # optional
+        - title: "Software Engineer"
+          quote: "If, at first, you do not succeed, call it version 1.0."
+          statement:
+            "Designing and building reliable software with clean, efficient architecture, using patterns like pub-sub,
+            finite state machines (FSM), and other design strategies. Skilled in creating scalable, event-driven systems
+            and APIs, with experience across SQL and NoSQL databases. Experienced in leveraging cloud platforms like AWS
+            and GCP to deploy and manage applications effectively."
+        - title: "Software Engineer"
+          quote: "Where's Waldo ?? Hunting for elusive sanity in settings."
+          statement:
+            "Designing and managing robust SIEM (Security Information and Event Management)
+            and SOAR (Security Orchestration, Automation, and Response) solutions. Creating precise
+            Ansible scripts to handle complex firewall and network configurations, ensuring smooth security operations.
+            Configuring and optimizing Elasticsearch, Logstash, and Kibana to build a reliable log management infrastructure
+            that strengthens overall system security."
+
+    resume: # optional
+      pdf_link: "resume.pdf" # optional
+      education: # optional
+        - title: "Msc Data science & computational intelligence"
+          duration: "2022 - 2024"
+          organization: "Softwarica College"
+          description:
+            "Gained skills in machine learning, data analysis, and AI-driven solutions,
+            applying theoretical concepts to real-world datasets and projects."
+
+        - title: "BSc Hons Computer Networking & IT security"
+          duration: "2018 - 2021"
+          organization: "Islington College"
+          description:
+            "Pursued specialized education in Networking and Cybersecurity,
+            acquiring knowledge of network architecture, protocols, and security frameworks"
+
+      experience: # optional
+        - title: "Senior Software Engineer"
+          duration: "2024 - Present"
+          organization: "Leapfrog Technology"
+          responsibilities:
+            - "Optimized data retrieval performance by designing and implementing database partitioning and indexing strategies in PostgreSQL"
+            - "Engineered a robust ETL pipeline for healthcare data using Airflow, automating data ingestion and processing"
+            - "Developed a complete ERP system, integrating third- party tools like Odoo and AutoCAD for extended functionality"
+            - "Enhanced the application’s user experience by developing an intuitive frontend"
+
+        - title: "Software Engineer"
+          duration: "2023 - 2024"
+          organization: "Tekvortex"
+          responsibilities:
+            - "Built a content curation platform that identifies and highlights relevant content, providing analysts with real-time, actionable intelligence"
+            - "Engineered a logging pipeline that stores user behavioral data in Elasticsearch, enabling the creation of dashboards that track user engagement, page visits, and link interactions for in-depth analytics"
+            - "Integrated Behavior-Driven Development (BDD) into the development workflow, significantly improving code reliability and ensuring features met business requirements"
+            - "Optimized search functionality by implementing custom tokenizers for different indexes in Elasticsearch, significantly improving search relevance and efficiency for various user queries."
+
+        - title: "Software Engineer (SIEM)"
+          duration: "2020 - 2023"
+          organization: "Vairav Technology"
+          responsibilities:
+            - "Automating SOC operations which includes automated response to threat, automating daily tasks of analysts, and SOAR integration"
+            - "Respondent at multiple cybersecurity workshops concerning specific software or cybersecurity approach in general"
+            - "Engineered a complete SIEM pipeline using Logstash to ingest logs into Elasticsearch, enabling centralized log analysis"
+            - "Team Lead for all golang respective backend projects"
+
+    skills: # optional
+      - title: "Frontend"
+        icon: "fas fa-code"
+        description: "Building responsive and accessible UIs using modern frameworks and React js"
+
+      - title: "Backend"
+        icon: "fas fa-code"
+        description: "Developing scalable APIs and microservices with Go, Python, and Node.js for robust backend solutions."
+
+      - title: "Cloud"
+        icon: "fas fa-cloud"
+        description: "Designing and deploying applications on AWS, with a focus on reliability and scalability."
+
+      - title: "Security"
+        icon: "fas fa-shield-alt"
+        description: "Implementing secure coding practices, authentication, encryption, and SIEM-based monitoring."
+
+      - title: "Database"
+        icon: "fas fa-database"
+        description: "Managing relational and NoSQL databases with optimization, partitioning, and CDC for high-performance systems."
+
+      - title: "DevOps"
+        icon: "fas fa-cogs"
+        description: "Setting up CI/CD pipelines, automated deployments, and infrastructure monitoring for efficient development."
+
+      - title: "Machine Learning"
+        icon: "fas fa-robot"
+        description: "Conducting research on semi-supervised learning for automated rule induction."
+
+    projects: # optional
+      categories:
+        - "general"
+        - "opensource"
+        - "database"
+      items:
+        - title: "Correlation Engine"
+          description: "A Golang-powered correlation engine using Pub/Sub channels to process logs and efficiently detect anomalies in network activity."
+          image: "images/correlation-engine.png"
+          category: "general"
+          source_link: "/project_correlation_engine.html"
+
+        - title: "Threat Intel"
+          description: "A hybrid system that analyzes logs, queries threat intelligence sources, enriches data with Python crawlers, and pushes alerts to Elasticsearch."
+          image: "images/threat-intel.png"
+          category: "general"
+          source_link: "/project_threat_intel.html"
+
+        - title: "Employee Management System"
+          description: "A cross-platform monitoring solution with Golang clients and a Python server, exchanging system metrics over gRPC for reliable communication."
+          image: "images/workplace-management.png"
+          category: "opensource"
+          source_link: "/project_employee_management_system.html"
+
+        - title: "CDC (SQL)"
+          description: "A flexible CDC script for MySQL and PostgreSQL that auto-generates triggers to maintain detailed pre- and post-update audit logs for tables."
+          image: "images/database.png"
+          category: "database"
+          source_link: "/project_cdc_script.html"
+
+        - title: "Rule Matching Engine"
+          description: "An open-source Golang library for real-time JSON rule matching, supporting aggregation, event chaining, and advanced Boolean logic operators."
+          image: "images/eventizer.png"
+          category: "opensource"
+          source_link: "/project_jsontology.html"
+
+        - title: "Portfolio Builder"
+          description: "A Golang-based static site generator that creates customizable personal portfolio websites directly from simple YAML configuration files."
+          image: "images/portfolio-builder.png"
+          category: "opensource"
+          source_link: "/project_portfolio_builder.html"
+
+    articles: # optional
+      items:
+        - title: "Beyond Basics of Postgres: Risk of cross-row read in check constraint"
+          description: "Exploring the implications of cross-row reads in Postgres check constraints"
+          date: "July 27, 2025"
+          published_on: "Medium"
+          link: "https://gsakshyam3.medium.com/beyond-basics-of-postgres-risk-of-cross-row-read-in-check-constraint-307bb23a138f"
+          tags:
+            - "database"
+            - "postgres"
+        - title: "Matching json with jsontology"
+          description: "Exploring custom made simple json matching engine"
+          date: "Sept 21, 2024"
+          published_on: "Medium"
+          link: "https://gsakshyam3.medium.com/matching-json-with-jsontology-34a2e4ae7df5"
+          tags:
+            - "golang"
+        - title: "Understanding python GIL"
+          description: "Exploring the Global Interpreter Lock (GIL) in Python and its implications for concurrency"
+          date: "Feb 25, 2024"
+          published_on: "LinkedIn"
+          link: "https://www.linkedin.com/pulse/understanding-python-gil-sakshyam-ghimire-weeoc/"
+          tags:
+            - "python"
+            - "concurrency"
+
+  articles:
+    item_tags:
+      - "database"
+      - "postgres"
+      - "golang"
+      - "python"
+      - "concurrency"
+      - "memory management"
+      - "data science"
+
+    title: "All Articles"
+    items:
+      - title: "Beyond Basics of Postgres: Risk of cross-row read in check constraint"
+        description: "Exploring the implications of cross-row reads in Postgres check constraints"
+        date: "July 27, 2025"
+        published_on: "Medium"
+        link: "https://gsakshyam3.medium.com/beyond-basics-of-postgres-risk-of-cross-row-read-in-check-constraint-307bb23a138f"
+        tags:
+          - "database"
+          - "postgres"
+
+      - title: "Matching json with jsontology"
+        description: "Exploring custom made simple json matching engine"
+        date: "Sept 21, 2024"
+        published_on: "Medium"
+        link: "https://gsakshyam3.medium.com/matching-json-with-jsontology-34a2e4ae7df5"
+        tags:
+          - "golang"
+
+      - title: "Understanding python GIL"
+        description: "Exploring the Global Interpreter Lock (GIL) in Python and its implications for concurrency"
+        date: "Feb 25, 2024"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/understanding-python-gil-sakshyam-ghimire-weeoc"
+        tags:
+          - "python"
+          - "concurrency"
+
+      - title: "Delving into memory inspection with python"
+        description: "Exploring kinds of memory like RSS, Heap Fragmentation and inspection in python"
+        date: "Oct 1, 2023"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/delving-memory-inspection-python-sakshyam-ghimire"
+        tags:
+          - "python"
+          - "memory management"
+
+      - title: "Pandas like SQL"
+        description: "Exploring how to use Pandas for SQL-like operations"
+        date: "July 30, 2023"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/pandas-like-sql-sakshyam-ghimire/"
+        tags:
+          - "python"
+          - "data science"
+
+      - title: "Demystifying Opensearch queries"
+        description: "Understanding opensearch queries and their execution properties"
+        date: "June 11, 2023"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/demystifying-opensearch-queries-sakshyam-ghimire"
+        tags:
+          - "database"
+
+      - title: "Imlementing pub-sub in golang"
+        description: "Implementing a simple pub-sub system in golang using channels and goroutines"
+        date: "June 18, 2022"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/implementing-pub-sub-golang-sakshyam-ghimire"
+        tags:
+          - "golang"
+
+      - title: "Concurrency state in golang"
+        description: "Exploring concurrency states like deadlock, livelock, starvation etc"
+        date: "April 28, 2022"
+        published_on: "LinkedIn"
+        link: "https://www.linkedin.com/pulse/concurrency-states-golang-sakshyam-ghimire"
+        tags:
+          - "golang"
+
+collections:
+  project_details:
+    items:
+      - title: "Correlation Engine"
+        category: "enterprise"
+        overview:
+          "The Correlation Engine is a cybersecurity-focused solution built in Golang to process high-volume
+          network logs and detect anomalies in near real-time. Its core objective was to strengthen Security
+          Operations Center (SOC) capabilities by correlating logs against predefined rules and immediately
+          flagging suspicious activity. By generating alerts with minimal latency and distributing them across
+          multiple communication channels such as email, Rocket.Chat, and Slack, the engine ensures that
+          stakeholders are notified promptly. This proactive approach improves the speed and accuracy of incident
+          response, reducing organizational exposure to threats while providing a reliable foundation for
+          rule-based anomaly detection."
+        tech_stacks:
+          - "Golang"
+          - "Kafka"
+          - "Elasticsearch"
+          - "gRPC"
+        tags:
+          - "Anomaly Detection"
+          - "Pub/Sub"
+          - "SIEM"
+        technical_insights:
+          - "Designed a Pub/Sub architecture using Golang channels for concurrent log correlation."
+          - "Integrated Kafka to handle large-scale alert distribution across communication channels."
+          - "Implemented gRPC APIs to manage and update rules dynamically."
+          - "Stored alerts in Elasticsearch for centralized log management and visualization."
+        relevant_articles:
+          - title: "Implementing Pub/Sub in Golang"
+            link: "https://www.linkedin.com/pulse/implementing-pub-sub-golang-sakshyam-ghimire/"
+        output_file: "project_correlation_engine.html"
+
+      - title: "Threat Intel"
+        category: "enterprise"
+        overview:
+          "Threat Intel is a dynamic cybersecurity project designed to enrich real-time threat detection by
+          combining Golang and Python. The system ingests logs through Logstash, validates them against
+          open-source threat intelligence platforms such as MISP, and further expands its coverage using Python
+          crawlers that collect data from websites like blocklist.de and ellio.tech. The objective was to provide
+          SOC teams with continuously updated, context-rich intelligence that enhances situational awareness.
+          By integrating log processing, external lookups, and proactive data collection, Threat Intel creates
+          a powerful pipeline that improves detection accuracy, reduces redundant queries through caching, and
+          ensures threats are identified and acted upon faster."
+
+        tech_stacks:
+          - "Golang"
+          - "Elasticsearch"
+          - "Logstash"
+          - "Redis"
+          - "Python"
+        tags:
+          - "Threat Intelligence"
+          - "Log Analysis"
+          - "Cybersecurity"
+        technical_insights:
+          - "Implemented buffered channels in Golang to concurrently query MISP and other open-source intelligence sources."
+          - "Developed Python crawlers to periodically fetch data from blocklist.de and ellio.tech."
+          - "Used Redis for caching to prevent redundant lookups and speed up analysis."
+          - "Pushed enriched results to Elasticsearch for storage and visualization."
+        output_file: "project_threat_intel.html"
+
+      - title: "Employee Management System"
+        category: "opensource"
+        source_link: "https://github.com/saksham-ghimire/workplace-management-system"
+        overview:
+          "The Employee Management System is a cross-platform monitoring and control solution built with Golang
+          clients and a Python-based server. Its primary objective was to give administrators real-time visibility
+          into employee system usage by collecting data such as CPU load, network traffic, and active applications.
+          Beyond monitoring, the system also introduced security controls like enforcing IP blocking via Windows
+          firewall rules, ensuring proactive protection against misuse. The collected data is visualized and
+          reported using Elasticsearch and Chart.js, providing administrators with actionable insights. This
+          project brings value by combining monitoring, analytics, and security enforcement into a single platform
+          that helps organizations optimize resources and maintain a secure work environment."
+
+        tech_stacks:
+          - "Golang"
+          - "Python"
+          - "Javascript (Chart.js)"
+          - "Elasticsearch"
+        tags:
+          - "System Monitoring"
+          - "gRPC"
+          - "Visualization"
+        technical_insights:
+          - "Built Golang clients with Win32 API integration for process-level monitoring and firewall rule enforcement."
+          - "Implemented gRPC communication between distributed clients and a centralized Python server."
+          - "Stored system metrics in Elasticsearch for analysis and visualization."
+          - "Used Chart.js to generate reports and dashboards for administrators."
+        output_file: "project_employee_management_system.html"
+
+      - title: "Change Data Capture (CDC) Script"
+        category: "enterprise"
+        overview:
+          "The CDC Script is a Python-driven solution for implementing Change Data Capture across MySQL and
+          PostgreSQL databases. Its purpose was to provide organizations with a unified way to track and audit
+          row-level changes without needing vendor-specific tools. The script dynamically inspects database
+          schemas and automatically generates triggers that record both pre- and post-update states of modified
+          rows. This ensures a detailed historical record of all data changes, greatly enhancing compliance,
+          traceability, and troubleshooting. By supporting multiple SQL engines with one adaptable script, the
+          solution reduces overhead while providing a flexible auditing mechanism for diverse environments."
+
+        tech_stacks:
+          - "Python"
+          - "SQL (MySQL/PostgreSQL)"
+        tags:
+          - "Database"
+          - "Change Data Capture"
+          - "Audit"
+        technical_insights:
+          - "Inspected information_schema tables dynamically to identify table/column structures."
+          - "Generated database-specific triggers, accounting for differences between MySQL and PostgreSQL."
+          - "Designed audit tables to store historical row states for traceability."
+          - "Created a single script adaptable to multiple database backends."
+        output_file: "project_cdc_script.html"
+
+      - title: "Jsontology"
+        category: "opensource"
+        source_link: "https://github.com/saksham-ghimire/jsontology"
+        overview:
+          "Jsontology is an open-source Golang library built to match JSON data against user-defined rules in
+          real time. Its objective was to create a lightweight, extensible rule engine capable of handling both
+          simple conditions and complex logical structures. The library supports advanced features such as event
+          aggregation, where actions are triggered only after repeated occurrences, and propositional logic
+          (AND/OR) for combining multiple rules. By emphasizing Test-Driven Development (TDD) and planning for
+          multi-language support (Python and JavaScript in progress), Jsontology provides developers with a
+          dependable and versatile tool. It brings value by enabling advanced filtering, decision-making, and
+          event-driven processing in systems that rely heavily on streaming JSON data."
+
+        tech_stacks:
+          - "Golang"
+          - "Python (under development)"
+          - "JavaScript (under development)"
+        tags:
+          - "JSON Processing"
+          - "Rule Engine"
+          - "Open Source"
+        technical_insights:
+          - 'Designed rule syntax such as {"a__eq": 1} for flexible JSON matching.'
+          - "Implemented event aggregation to chain occurrences until user-defined thresholds are met."
+          - "Supported propositional logic (AND/OR) for building complex rules."
+          - "Followed TDD practices to ensure correctness and maintainability."
+        output_file: "project_jsontology.html"
+
+      - title: "Portfolio Builder"
+        category: "opensource"
+        source_link: "https://github.com/saksham-ghimire/portfolio-builder"
+        overview:
+          "The Portfolio Builder is a Go-based tool that automates the creation of project portfolios using
+          YAML configuration files and Go’s html/template engine. The objective was to simplify the process
+          of building clean, consistent portfolios without manually writing repetitive HTML. By defining
+          project details in YAML, users can inject their data into pre-designed templates, instantly
+          generating polished portfolio pages. The system supports multiple templates, each with its own
+          configuration file, allowing users to easily switch designs or adapt layouts by simply updating
+          YAML values. This separation of data and presentation makes it highly flexible, reusable, and
+          beginner-friendly. It adds value by giving developers, students, and professionals a fast way to
+          create personalized, professional portfolios without worrying about front-end implementation."
+        tech_stacks:
+          - "Golang"
+          - "YAML"
+          - "HTML/CSS"
+        tags:
+          - "Golang"
+          - "Automation"
+        technical_insights:
+          - "Leveraged Go’s html/template engine to inject YAML-defined content into reusable templates."
+          - "Designed a configuration-driven approach, where each template has its own config file for flexibility."
+          - "Supports multiple template styles — users can change the look of their portfolio by simply swapping configs."
+          - "Separated content (YAML) from presentation (HTML/CSS), ensuring scalability and maintainability."
+        output_file: "project_portfolio_builder.html"
